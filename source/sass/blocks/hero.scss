@@ -1,0 +1,10 @@
+.hero {
+  position: relative;
+
+  padding: 0;
+  overflow: hidden;
+
+  @media (min-width: $vp-768) {
+    z-index: 0;
+  }
+}

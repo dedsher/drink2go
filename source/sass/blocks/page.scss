@@ -1,0 +1,45 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page__title {
+  position: relative;
+
+  &::before {
+    content: "Новинка";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-blue-marguerite;
+    text-transform: uppercase;
+    letter-spacing: 0.48px;
+
+    transform: translateX(-50%);
+  }
+
+  &--features {
+    &::before {
+      content: "Преимущества";
+    }
+  }
+
+  &--catalog {
+    &::before {
+      content: "Каталог";
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    &--promo-card::before {
+      left: 0;
+
+      transform: unset;
+    }
+  }
+}

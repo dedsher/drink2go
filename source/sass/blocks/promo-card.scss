@@ -1,0 +1,142 @@
+.promo-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0 60px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -10;
+
+    display: block;
+    width: 200vw;
+
+    background-color: $color-merino;
+    transform: translateX(-50%);
+  }
+
+  &--latte {
+    &::after {
+      background-color: $color-selago;
+    }
+  }
+
+  &--espresso {
+    &::after {
+      background-color: $color-iron;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 80px 80px 0;
+
+    &::after {
+      bottom: 188px;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 80px 84px;
+
+    column-gap: 30px;
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+.promo-card__img-wrapper {
+  width: 100%;
+  margin: 0 0 30px 0;
+	min-width: 280px;
+	min-height: 280px;
+
+  @media (min-width: $vp-768) {
+    order: 2;
+    margin: 0;
+		max-width: 476px;
+		max-height: 476px;
+		margin: 0 auto;
+  }
+
+  @media (min-width: $vp-1280) {
+    order: 0;
+		max-height: unset;
+    min-width: 600px;
+    height: 600px;
+  }
+}
+
+.promo-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.promo-card__about {
+  text-align: center;
+
+  @media (min-width: $vp-1280) {
+    text-align: start;
+  }
+}
+
+.promo-card__title {
+  margin: 0 0 10px 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.72px;
+
+  @media (min-width: $vp-768) {
+    font-size: 56px;
+    line-height: 80px;
+    letter-spacing: 1.12px;
+    margin: 0 0 16px 0;
+  }
+}
+
+.promo-card__desc {
+  margin: 0 0 20px 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 0 40px 0;
+  }
+}
+
+.promo-card__order-wrapper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+
+  gap: 20px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 auto 20px auto;
+  }
+
+  @media (min-width: $vp-1280) {
+    margin: 0 auto 0 0;
+  }
+}

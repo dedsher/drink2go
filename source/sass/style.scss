@@ -1,7 +1,29 @@
 /* GLOBAL */
 @import "global/variables";
-@import "global/global";
+@import "global/reboot.scss";
 @import "global/fonts";
+@import "global/container.scss";
+@import "global/utils.scss";
 
 /* BLOCKS */
+@import "blocks/page.scss";
 @import "blocks/header";
+@import "blocks/nav.scss";
+@import "blocks/logo.scss";
+@import "blocks/hero.scss";
+@import "blocks/promo-slider.scss";
+@import "blocks/promo-card.scss";
+@import "blocks/price.scss";
+@import "blocks/button-accent.scss";
+@import "blocks/features.scss";
+@import "blocks/feature.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filters.scss";
+@import "blocks/cards.scss";
+@import "blocks/card.scss";
+@import "blocks/pagination.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+@import "blocks/footer-nav.scss";
+@import "blocks/map.scss";
+@import "blocks/slider.scss";

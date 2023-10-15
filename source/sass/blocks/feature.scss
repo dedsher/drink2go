@@ -1,0 +1,90 @@
+.feature {
+  position: relative;
+
+  padding: 70px 0 0 0;
+
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+    width: 52px;
+    height: 56px;
+
+    transform: translateX(-50%);
+  }
+
+  &--speed::after {
+    background-image: url("../../images/speed.png");
+  }
+
+  &--fit::after {
+    background-image: url("../../images/fit.png");
+  }
+
+  &--energy::after {
+    background-image: url("../../images/energy.png");
+  }
+
+  &--eco::after {
+    background-image: url("../../images/eco.png");
+  }
+
+  @media (min-width: $vp-768) {
+    max-width: 339px;
+    padding: 0 0 0 72px;
+
+    text-align: start;
+
+    &::after {
+      left: 0;
+
+      transform: unset;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    max-width: 317px;
+    padding: 76px 0 0 0;
+
+    text-align: center;
+
+    &::after {
+      top: 0;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.feature__title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 10px 0;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.feature__desc {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

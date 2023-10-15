@@ -1,0 +1,132 @@
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $vp-768) {
+    flex-direction: row;
+		gap: 30px;
+  }
+}
+
+.footer-nav__column {
+  position: relative;
+
+  padding: 20px 0;
+
+  &::before,
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: $color-silver;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 0;
+    bottom: unset;
+  }
+
+  @media (min-width: $vp-768) {
+    max-width: 223px;
+    padding: 0;
+
+    &::before,
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    max-width: 317px;
+  }
+}
+
+.footer-nav__title {
+  margin: 0 0 12px 0;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-blue-marguerite;
+  letter-spacing: 0.28px;
+}
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.footer-nav__list--contacts {
+  .footer-nav__item + .footer-nav__item {
+    margin: 20px 0 0 0;
+  }
+
+  .footer-nav__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+
+      width: 13px;
+      height: 16px;
+
+      background-color: $color-blue-marguerite;
+    }
+
+    &--address,
+    &--phone {
+      padding: 0 0 0 20px;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &--address::before {
+      mask-image: url("../../images/icons/stack.svg#address");
+    }
+
+    &--phone::before {
+      mask-image: url("../../images/icons/stack.svg#phone");
+    }
+  }
+}
+
+.footer-nav__item + .footer-nav__item {
+  margin: 4px 0 0 0;
+}
+
+.footer-nav__link {
+  display: block;
+  padding: 8px 0;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-default-black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.24px;
+
+  &:hover,
+  &:focus {
+    color: $color-portage;
+  }
+
+  &:active {
+    color: $color-royal-purple;
+  }
+}

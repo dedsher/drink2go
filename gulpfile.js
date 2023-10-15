@@ -94,6 +94,7 @@ export function copyAssets () {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/vendor/**/*'
   ], {
     base: 'source'
   })
@@ -119,7 +120,7 @@ function reloadServer (done) {
 
 function watchFiles () {
   gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
-  gulp.watch('source/js/script.js', gulp.series(processScripts));
+  gulp.watch('source/js/*.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }
 

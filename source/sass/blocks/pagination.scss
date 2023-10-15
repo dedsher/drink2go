@@ -1,0 +1,145 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $vp-768) {
+    width: fit-content;
+    margin-left: auto;
+
+    gap: 20px;
+  }
+}
+
+.pagination__direction {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: $color-default-white;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 6px;
+    height: 10px;
+
+    background-color: $color-blue-marguerite;
+    transform: translate(-50%, -50%);
+
+    mask-image: url("../../images/icons/stack.svg#arrow");
+  }
+
+  &--next::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+
+    background-color: $color-portage;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-royal-purple;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-default-white;
+
+    background-color: $color-mercury;
+    cursor: not-allowed;
+  }
+
+  @media (min-width: $vp-768) {
+    width: unset;
+    padding: 8px 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-blue-marguerite;
+    text-decoration: none;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.pagination__subtitle {
+  display: none;
+
+  @media (min-width: $vp-768) {
+    display: block;
+  }
+}
+
+.pagination__point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  margin: 0;
+  padding: 8px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-blue-marguerite;
+  text-decoration: none;
+
+  background-color: $color-default-white;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+
+    background-color: $color-portage;
+  }
+
+  &:active {
+    background-color: $color-royal-purple;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-default-white;
+
+    background-color: $color-mercury;
+    cursor: not-allowed;
+  }
+
+  &--current {
+    font-weight: 600;
+    color: $color-default-black;
+
+    background-color: unset;
+
+    &:hover,
+    &:focus {
+      color: $color-default-black;
+
+      background-color: $color-transparent;
+    }
+
+    &:active {
+      color: $color-default-black;
+
+      background-color: $color-transparent;
+    }
+  }
+}

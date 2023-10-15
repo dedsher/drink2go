@@ -1,0 +1,28 @@
+.button-accent {
+  display: block;
+  padding: 8px 20px;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-default-white;
+
+  background-color: $color-blue-marguerite;
+  border: unset;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-portage;
+  }
+
+  &:active {
+    background-color: $color-royal-purple;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $color-silver;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $vp-768) {
+    padding: 0 30px;
+
+    &--header,
+    &--catalog,
+		&--footer {
+      padding: 0 20px;
+    }
+  }
+
+  @media (min-width: $vp-1280) {
+    padding: 0 40px;
+  }
+}

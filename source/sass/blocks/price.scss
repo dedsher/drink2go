@@ -1,0 +1,19 @@
+.price {
+  display: flex;
+  margin: 0;
+
+  gap: 6px;
+}
+
+.price__old {
+  font-size: 16px;
+  line-height: 32px;
+  vertical-align: middle;
+  color: $color-blue-marguerite;
+}
+
+.price__current {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}

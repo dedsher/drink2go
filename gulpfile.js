@@ -13,6 +13,15 @@ import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
+<<<<<<< gh-pages
+=======
+import ghPages from 'gulp-gh-pages';
+
+export function deploy () {
+	return gulp.src('../build/**/*')
+    .pipe(ghPages());
+}
+>>>>>>> local
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;

@@ -32,12 +32,3 @@ slider.noUiSlider.on('update', function (values, handle) {
 	sliderFromField.value = range[0];
 	sliderToField.value = range[1];
 });
-
-// // Слушаем событие ввода значений в полях
-// sliderFromField.addEventListener('change', function () {
-// 	slider.noUiSlider.set([minValueInput.value, null]);
-// });
-
-// sliderToField.addEventListener('change', function () {
-// 	slider.noUiSlider.set([null, maxValueInput.value]);
-// });

@@ -1,5 +1,13 @@
 node_modules
 *.min.*
-build
+assets
+source
+.editorconfig
+.linthtmnrc
+.stylelintrc
+gulpfile.js
+package-lock.json
+package.json
+README.md
 .idea
 .DS_Store
